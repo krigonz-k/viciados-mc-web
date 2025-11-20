@@ -1,46 +1,44 @@
-/* ===== Page Background ===== */
-.page-background {
-  min-height: 100vh;
-  padding: 40px 20px;
-  text-align: center;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  background-image: url('/assets/img/mine.png'); /* fondo precios */
-  background-size: contain;
-}
-
 /* ===== Contenedor de Precios ===== */
 .precios-container {
   max-width: 700px;
   margin: 40px auto;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.65); /* fondo semi-transparente tipo landing */
+  background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
   border-radius: 12px;
-  border: 2px solid #3c8c45;
-  box-shadow: 0 0 15px #4cff63;
+  border: 2px solid #b38b00; /* dorado */
+  box-shadow: 0 0 15px #ffd84d; /* dorado brillante */
   color: #fff;
   text-align: center;
   font-family: "Minecraft", sans-serif;
 }
 
-/* Título */
-.precios-container h1 {
-  font-size: 2.2rem;
+/* TITULOS */
+.title-main {
+  font-size: 2.4rem;
+  margin-top: 15px;
   margin-bottom: 25px;
-  text-shadow: 0 0 8px #00ff5e;
-  color: #7aff7a;
+  color: #ffdf70;
+  text-shadow: 0 0 10px #ffb300;
+}
+
+.promo-title {
+  font-size: 2.6rem;
+  color: #ffe680;
+  text-shadow: 0 0 12px #ffcc33;
+  margin-bottom: 10px;
+}
+
+.promo-sub {
+  font-size: 1.5rem;
+  color: #fff3b0;
+  margin-bottom: 30px;
+  text-shadow: 0 0 6px #d4a300;
 }
 
 /* Lista */
-.precios-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .precios-container li {
-  background: rgba(34, 34, 34, 0.8);
+  background: rgba(34, 34, 34, 0.85);
   padding: 14px 20px;
   margin: 12px 0;
   border-radius: 10px;
@@ -48,36 +46,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #2e7d37;
+  border: 2px solid #a88300;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Emoji a la izquierda */
-.precios-container li span.emoji {
-  margin-right: 10px;
-}
-
-/* Hover tipo ítem raro */
+/* Hover dorado */
 .precios-container li:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 12px #4cff63;
-  border-color: #4cff63;
+  box-shadow: 0 0 14px #ffdd55;
+  border-color: #ffdd55;
 }
 
-/* Opcional: precios más marcados */
+/* Icono de dinero */
 .precios-container li::after {
-  content: "💵";
-  opacity: 0.8;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 700px) {
-  .precios-container {
-    padding: 20px;
-  }
-
-  .precios-container li {
-    font-size: 1rem;
-    padding: 12px 15px;
-  }
+  content: "💰";
+  opacity: 0.9;
 }

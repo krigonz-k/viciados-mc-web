@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fuente pixel Minecraft */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('https://fonts.cdnfonts.com/s/81555/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  background: #000 url('assets/img/mine2.png') no-repeat center center; /* imagen ya en el body */
+  background-size: cover;
+  background-attachment: fixed; /* no se mueve al scrollear */
+  color: #fff;
+}
+
+/* ===== MENÚ ESTILO CREEPER ===== */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+
+  background: linear-gradient(
+    180deg,
+    #0a0f0a,
+    #0e190e,
+    #0a0f0a
+  );
+  border-bottom: 3px solid #00ff55;
+  box-shadow: 0 0 16px #00ff5588;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  animation: creeperPulse 2.5s infinite ease-in-out;
+}
+
+.navbar a {
+  color: #d9ffd9;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 12px;
+
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+  text-shadow: 1px 1px 2px black;
+
+  border: 1px solid transparent;
+}
+
+/* ===== Hover "Creeper Glow" ===== */
+.navbar a:hover {
+  background: #113611;
+  border-color: #00ff55;
+  box-shadow: 0 0 10px #00ff55cc, 0 0 20px #00ff5544;
+  transform: translateY(-2px);
+}
+
+/* ===== Separadores pixelados ===== */
+.navbar a + a {
+  position: relative;
+}
+
+.navbar a + a::before {
+  content: "";
+  width: 2px;
+  height: 22px;
+  background: #1f3a1f;
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===== Efecto “Creeper pulse” animado ===== */
+@keyframes creeperPulse {
+  0%   { box-shadow: 0 0 12px #00ff5566; }
+  50%  { box-shadow: 0 0 22px #00ff88aa; }
+  100% { box-shadow: 0 0 12px #00ff5566; }
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 20px;
+    padding: 12px 0;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  .navbar a + a::before {
+    height: 18px;
+    left: -14px;
+  }
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  background: #000 url('assets/img/mine3.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}

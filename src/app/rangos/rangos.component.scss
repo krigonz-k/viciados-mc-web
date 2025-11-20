@@ -1,0 +1,174 @@
+/* ===== Page Background ===== */
+.page-background {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  background-image: url('/assets/img/mine2.png'); /* sin / al inicio */
+  background-size: contain;
+}
+
+/* ===== Contenedor de Rangos ===== */
+.rangos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+/* Wrapper de cards */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* un poco más de espacio */
+}
+
+/* Cards de rango */
+.rango-card {
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.3s;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tamaños relativos por rango */
+.iron {
+  width: 320px; /* un poco más pequeña */
+  background: linear-gradient(145deg, #2a3b4c, #1a242f);
+  border-color: #9bb2c4;
+}
+
+.gold {
+  width: 350px; /* base */
+  background: linear-gradient(145deg, #3b2f0a, #2b2208);
+  border-color: #ffd950;
+}
+
+.diamond {
+  width: 380px; /* un poco más grande */
+  background: linear-gradient(145deg,#09323a,#06252c);
+  border-color:#00eaff;
+  box-shadow: 0 0 15px #00eaffcc,0 0 28px #00c3ff99;
+  animation: diamondPulse 2.2s infinite ease-in-out;
+  margin-top: -10px; /* subir un poco para centrar visualmente */
+}
+
+/* Hover */
+.rango-card:hover {
+  transform: scale(1.03);
+}
+
+/* Títulos de rango */
+.rango-card h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Secciones internas y listas */
+.rango-card section,
+.rango-card h3,
+.rango-card p {
+  margin-bottom: 15px;
+}
+
+/* Listas más ordenadas */
+.rango-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.rango-card ul li {
+  margin-bottom: 8px; /* más espaciado entre items */
+  line-height: 1.5;
+}
+
+/* Totales y notas */
+.total {
+  font-weight: bold;
+  color: #ffd700;
+  margin-top: 10px;
+}
+
+.nota {
+  font-size: 0.9rem;
+  color: #fff;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Lategame box */
+.lategame-box {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(0,0,0,0.65);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  color: #ffd480;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.lategame-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+@keyframes diamondPulse {
+  0% { box-shadow:0 0 15px #00eaffcc,0 0 28px #00c3ff99; }
+  50% { box-shadow:0 0 22px #33f4ffdd,0 0 40px #00c3ffaa; }
+  100% { box-shadow:0 0 15px #00eaffcc,0 0 28px #00c3ff99; }
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .iron { width: 45%; }
+  .gold { width: 48%; }
+  .diamond { width: 50%; }
+}
+
+@media (max-width: 700px) {
+  .rango-card { width: 90%; }
+}
+
+
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 6px #000;
+  text-decoration: line-through; /* Tacha el precio */
+}
+
+.discount {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  text-shadow: 1px 1px 3px #000;
+  margin-top: 5px;
+}
+
+.price-container {
+  text-align: center;
+  margin: 15px 0;
+}
+
+
+
